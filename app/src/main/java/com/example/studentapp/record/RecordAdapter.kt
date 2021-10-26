@@ -1,21 +1,21 @@
-package com.example.studentapp
+package com.example.studentapp.record
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_detail_student.*
+import com.example.studentapp.R
+import com.example.studentapp.subject.SubjectActivity
 import kotlinx.android.synthetic.main.item_record.view.*
-import kotlinx.android.synthetic.main.item_student.view.*
 
 
-class RecordAdapter(private val records: List<Record>,private val studentName:String):
+class RecordAdapter(private val records: List<Record>, private val studentName:String):
     RecyclerView.Adapter<RecordAdapter.RecordHolder>() {
     class RecordHolder (private val view: View): RecyclerView.ViewHolder(view){
 
         private  fun checkValue(student_id:Int,studentName:String) {
-            val intent = Intent(view.context,SubjectActivity::class.java)
+            val intent = Intent(view.context, SubjectActivity::class.java)
             intent.putExtra("ID_STUDENT",student_id)
             intent.putExtra("INTENT_NAME",studentName)
             intent.putExtra("ID_RECORD",view.tvRecordID.text.toString().toInt())

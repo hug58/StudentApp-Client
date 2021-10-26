@@ -1,5 +1,9 @@
 package com.example.studentapp
 
+import com.example.studentapp.record.RecordCreate
+import com.example.studentapp.record.RecordResponse
+import com.example.studentapp.record.RecordResponseDetail
+import com.example.studentapp.record.RecordTableResponse
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*

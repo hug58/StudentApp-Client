@@ -1,4 +1,4 @@
-package com.example.studentapp
+package com.example.studentapp.record
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,7 @@ import android.view.ViewGroup
 
 import androidx.core.widget.doAfterTextChanged
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_create_subject.*
-import kotlinx.android.synthetic.main.activity_create_subject.view.*
+import com.example.studentapp.R
 import kotlinx.android.synthetic.main.edit_item_subject.view.*
 
 

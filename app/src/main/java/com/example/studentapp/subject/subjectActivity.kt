@@ -1,10 +1,13 @@
-package com.example.studentapp
+package com.example.studentapp.subject
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.studentapp.APIservice
+import com.example.studentapp.R
+import com.example.studentapp.record.SubjectRecord
 import kotlinx.android.synthetic.main.activity_detail_student.btnBack
 import kotlinx.android.synthetic.main.activity_subject.*
 import kotlinx.coroutines.CoroutineScope

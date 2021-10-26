@@ -1,11 +1,13 @@
-package com.example.studentapp
+package com.example.studentapp.students
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
+import com.example.studentapp.APIservice
+import com.example.studentapp.R
+import com.example.studentapp.StudentCreate
 import kotlinx.android.synthetic.main.activity_create_and_edit.*
-import kotlinx.android.synthetic.main.create_edit_student.*
 import kotlinx.android.synthetic.main.create_edit_student.btnAdd
 import kotlinx.android.synthetic.main.create_edit_student.btnBack
 import kotlinx.android.synthetic.main.create_edit_student.tvCI

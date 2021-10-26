@@ -12,10 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentApp">
-        <activity android:name=".CreateAndEdit"></activity>
-        <activity android:name=".CreateSubject" />
-        <activity android:name=".SubjectActivity" />
-        <activity android:name=".detailStudent" />
+        <activity
+            android:name=".record.RecordsTable"
+            android:exported="true" />
+        <activity android:name=".students.CreateAndEdit" />
+        <activity android:name=".subject.CreateSubject" />
+        <activity android:name=".subject.SubjectActivity" />
+        <activity android:name=".students.detailStudent" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

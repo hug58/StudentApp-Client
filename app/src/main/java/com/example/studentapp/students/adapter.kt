@@ -1,17 +1,17 @@
-package com.example.studentapp
+package com.example.studentapp.students
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.view.isGone
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.item_student.*
+import com.example.studentapp.R
+import com.example.studentapp.Student
 import kotlinx.android.synthetic.main.item_student.view.*
 
-class StudentAdapter (private val student:List<Student>):
-    RecyclerView.Adapter<StudentAdapter.StudentHolder>() {
+class adapter (private val student:List<Student>):
+    RecyclerView.Adapter<adapter.StudentHolder>() {
     class StudentHolder (private val view: View):RecyclerView.ViewHolder(view){
 
         private fun showMessage(view:View){
@@ -19,7 +19,7 @@ class StudentAdapter (private val student:List<Student>):
         }
 
         fun checkValue(view: View) {
-            val intent = Intent(view.context,detailStudent::class.java)
+            val intent = Intent(view.context, detailStudent::class.java)
             intent.putExtra("INTENT_NAME","${view.tvFirstName.text} ${view.tvLastName.text}")
             intent.putExtra("ID_STUDENT",view.tvID.text)
 

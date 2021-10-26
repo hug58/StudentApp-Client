@@ -3,8 +3,9 @@ package com.example.studentapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.studentapp.students.CreateAndEdit
+import com.example.studentapp.students.adapter
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -19,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MainActivity : AppCompatActivity() {
 
     private  var studentsRest = mutableListOf<Student>()
-    private lateinit var  adapter: StudentAdapter
+    private lateinit var  adapter: adapter
 
     override fun onResume() {
         super.onResume()
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkValue() {
-        val intent = Intent(this,CreateAndEdit::class.java)
+        val intent = Intent(this, CreateAndEdit::class.java)
         this.startActivity(intent)
     }
 
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initRecycler(){
         rvStudent.layoutManager = LinearLayoutManager(this)
-        adapter = StudentAdapter(studentsRest)
+        adapter = adapter(studentsRest)
 
         rvStudent.adapter = adapter
     }

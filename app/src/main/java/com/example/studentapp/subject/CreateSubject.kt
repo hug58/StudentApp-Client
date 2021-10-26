@@ -1,12 +1,17 @@
-package com.example.studentapp
+package com.example.studentapp.subject
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.studentapp.APIservice
+import com.example.studentapp.record.CreateRecordAdapter
+import com.example.studentapp.R
+import com.example.studentapp.record.RecordCreate
+import com.example.studentapp.record.RecordTable
+import com.example.studentapp.record.Subject
 import kotlinx.android.synthetic.main.activity_create_subject.*
 import kotlinx.android.synthetic.main.activity_create_subject.btnBack
 
@@ -66,7 +71,7 @@ class CreateSubject : AppCompatActivity() {
 
     private  fun recordDoneRead(studentId:Int, idRecord:Int) {
         //Funcion para enviar y leer el nuevo Record Academico
-        val intent = Intent(this,SubjectActivity::class.java)
+        val intent = Intent(this, SubjectActivity::class.java)
         intent.putExtra("ID_STUDENT",getStudent())
         intent.putExtra("ID_RECORD",idRecord)
         this.startActivity(intent)

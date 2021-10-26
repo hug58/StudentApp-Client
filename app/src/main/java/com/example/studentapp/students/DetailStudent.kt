@@ -1,4 +1,4 @@
-package com.example.studentapp
+package com.example.studentapp.students
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,9 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.studentapp.APIservice
+import com.example.studentapp.R
+import com.example.studentapp.record.Record
+import com.example.studentapp.record.RecordAdapter
+import com.example.studentapp.subject.CreateSubject
 import kotlinx.android.synthetic.main.activity_detail_student.*
-import kotlinx.android.synthetic.main.item_record.view.*
-import kotlinx.android.synthetic.main.item_student.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -75,7 +78,7 @@ class detailStudent : AppCompatActivity() {
     }
 
     private  fun checkValue(studentId:String,studentName:String) {
-        val intentSent = Intent(this,CreateSubject::class.java)
+        val intentSent = Intent(this, CreateSubject::class.java)
         intentSent.putExtra("ID_STUDENT",studentId);
         intentSent.putExtra("INTENT_NAME",studentName);
 

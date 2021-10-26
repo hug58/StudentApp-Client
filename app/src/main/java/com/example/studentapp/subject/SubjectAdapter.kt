@@ -1,9 +1,11 @@
-package com.example.studentapp
+package com.example.studentapp.subject
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.studentapp.R
+import com.example.studentapp.record.SubjectRecord
 import kotlinx.android.synthetic.main.item_subject.view.*
 
 class SubjectAdapter(private val subjects: MutableList<SubjectRecord>): RecyclerView.Adapter<SubjectAdapter.SubjectHolder>() {
